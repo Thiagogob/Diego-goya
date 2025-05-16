@@ -23,11 +23,11 @@
 @import "./pages/footer";
 
 body{
-    background-color: $dim;
+    background-color: $black;
     height: auto;
 
     &.dark {
-        background-color: $dim;
+        background-color: $black;
     }
 }
 
@@ -53,3 +53,79 @@ body{
     }
 
 }
+
+#banner_id {
+    .banner_div {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+  
+      .left_info_div {
+        flex: 1;
+  
+        .slogan {
+          font-size: 2.5rem;
+        }
+  
+        .company_logo_div {
+          ul {
+            display: flex;
+            flex-wrap: wrap;
+            padding-left: 0;
+            gap: 1rem;
+  
+            li {
+              list-style: none;
+            }
+          }
+        }
+  
+        .photo_div {
+          position: relative;
+          margin-top: 2rem;
+  
+          img {
+            max-width: 100%;
+            height: auto;
+            position: relative;
+            top: -90px;
+          }
+  
+          .lawyer_info {
+            margin-top: -50px;
+            h2 {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  
+    // 📱 Responsividade
+    @media (max-width: 768px) {
+      .banner_div {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+  
+      .left_info_div {
+        .photo_div {
+          img {
+            top: 0;
+            max-width: 300px;
+          }
+  
+          .lawyer_info {
+            margin-top: 10px;
+          }
+        }
+      }
+  
+      .company_logo_div ul {
+        justify-content: center;
+      }
+    }
+  }
+  
